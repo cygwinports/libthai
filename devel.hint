@@ -1,5 +1,5 @@
 category: Text Libs
-requires: cygwin libdatrie-devel
+requires: cygwin libthai0 libdatrie-devel
 external-source: libthai
 sdesc: "Thai language support library (development)"
 ldesc: "LibThai is a set of Thai language support routines aimed to ease 

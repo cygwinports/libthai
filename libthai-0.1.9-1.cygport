@@ -1,0 +1,14 @@
+DESCRIPTION="Thai language support library"
+HOMEPAGE="http://linux.thai.net/"
+#SRC_URI="http://linux.thai.net/pub/thailinux/software/libthai/${P}.tar.gz"
+SRC_URI="http://ftp.debian.org/debian/pool/main/${PN:0:4}/${PN}/${PN}_${PV}.orig.tar.gz"
+
+CYGCONF_ARGS="--with-html-docdir=/usr/share/doc/${P}/html"
+MAKEOPTS+=" -j1" # data/
+
+abi=0
+PKG_NAMES="${PN} ${PN}${abi} ${PN}-devel"
+PKG_HINTS="setup runtime devel"
+PKG_CONTENTS[0]='--exclude=man3 usr/share/doc/ usr/share/man/'
+PKG_CONTENTS[1]="usr/bin/*-${abi}.dll usr/share/libthai/"
+PKG_CONTENTS[2]='usr/include/ usr/lib/'
