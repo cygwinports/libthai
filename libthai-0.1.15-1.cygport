@@ -1,0 +1,10 @@
+DESCRIPTION="Thai language support library"
+HOMEPAGE="http://linux.thai.net/"
+SRC_URI="http://linux.thai.net/pub/thailinux/software/libthai/${P}.tar.gz"
+
+PKG_NAMES="${PN}0 ${PN}-devel"
+libthai0_CONTENTS="--exclude=html usr/bin/cygthai-0.dll usr/share/doc/ usr/share/libthai/"
+libthai_devel_CONTENTS="usr/include/ usr/lib/ usr/share/doc/${PN}/html/"
+
+CYGCONF_ARGS="--with-html-docdir=/usr/share/doc/${PN}/html"
+MAKEOPTS+=" -j1" # data/
