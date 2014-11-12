@@ -1,5 +1,5 @@
 NAME="libthai"
-VERSION=0.1.19
+VERSION=0.1.21
 RELEASE=1
 CATEGORY="Text"
 SUMMARY="Thai language support library"
